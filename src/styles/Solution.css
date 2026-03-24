@@ -1,0 +1,157 @@
+.solution {
+    background-color: var(--primary);
+    color: white;
+    padding: 8rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.solution-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.solution-text {
+    max-width: 500px;
+}
+
+.solution-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.solution-desc {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.solution-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.solution-feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    width: 100%;
+    max-width: 450px;
+}
+
+.solution-feature-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-10px);
+}
+
+.card-1 {
+    align-self: flex-start;
+}
+
+.card-2 {
+    align-self: center;
+}
+
+.card-3 {
+    align-self: flex-end;
+}
+
+.solution-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--primary);
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.solution-icon-svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.5px;
+}
+
+.solution-feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 992px) {
+    .solution {
+        padding: 5rem 5%;
+    }
+
+    .solution-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .solution-text {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .solution-title {
+        font-size: 2.25rem;
+    }
+
+    .solution-features {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .solution-feature-card {
+        align-self: center !important;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .solution-feature-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 640px) {
+    .solution-feature-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem 1rem;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .solution-feature-title {
+        font-size: 1.125rem;
+    }
+}

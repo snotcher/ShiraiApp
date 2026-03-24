@@ -1,0 +1,100 @@
+.security {
+    background-color: #0f0514;
+    /* Very dark purple/black */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.security-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.security-container {
+    position: relative;
+    z-index: 1;
+}
+
+.security-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.security-icon-wrapper {
+    background: rgba(96, 34, 73, 0.2);
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(96, 34, 73, 0.3);
+}
+
+.shield-icon {
+    color: var(--primary);
+}
+
+.security .section-title {
+    color: white;
+}
+
+.security .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.security-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.security-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.sec-icon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.sec-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.sec-desc {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+}
