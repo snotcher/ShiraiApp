@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, MapPin, Star, Building2, Scale, Terminal, HardHat } from 'lucide-react';
+import { Search, MapPin, Star, Building2, Scale, Terminal, HardHat, Zap } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 import '../styles/Discovery.css';
 
@@ -77,7 +77,9 @@ const Discovery = () => {
                       <MapPin size={14} /> {company.location}
                     </div>
                   </div>
-                  <button className="btn btn-outline btn-sm w-full mt-auto">View Profile</button>
+                  <button className="company-action-btn mt-auto">
+                    <Zap size={16} /> Start a Deal
+                  </button>
                 </div>
               ))}
             </div>
